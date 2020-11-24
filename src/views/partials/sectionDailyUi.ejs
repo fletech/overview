@@ -1,0 +1,19 @@
+
+     <% for (let i=0; i<baseDatos.length; i++) { %> 
+     
+     <!--DailyCards-->
+   
+<div class="boxCard">
+     <a href=<%=':'+(i+1)%> class="boxLink">
+       <div class="contenedorImagen">
+
+           <img src=<%=`${baseDatos[i].imagen}`%> alt="">
+
+       </div>
+       <div class="infoCaja">
+           <h3>Daily UI <%= baseDatos[i].numeroDia %></h3>
+           <p><%= baseDatos[i].title %></p>
+       </div>
+     </a>
+   </div>
+<% }%> 

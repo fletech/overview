@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%-title %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  </head>
+
+<body>
+
+  <header>  
+    <%- include('./partials/header')%> <!--HEADER-->  
+  </header>
+
+  <main>
+    <section class="newDailyForm">
+     <div class="cajaForm">
+
+     <h2>New Daily</h2>
+      <form action="" method="POST" enctype="multipart/form-data">
+          <div class="dia">
+               <label for="numeroDia">Day nº</label>
+               <!-- <input id="numeroDia" type="text"  name="numeroDia"> -->
+               <select name="numeroDia" id="numeroDia" placeholder="ej: '001'" >
+                    <% for(let i= 0; i<100; i++) {%>
+                         <% if (i <= 8)  {%>
+                         <option value="<%= `00${i+1}` %>"><%= `00${i+1}` %></option>
+                         <% } else { %> 
+                              <option value="<%= `0${i+1}` %>"><%= `0${i+1}` %></option> 
+                          <% } %> 
+                         
+                    <% }%>
+               </select>
+          </div>
+          <div class="title">
+               <label for="title">Challenge Name</label>
+               <input id="title" type="text" placeholder="Premisa" name="title">
+          </div>
+          <div class="imagen">
+               <label for="imagen">Image</label>
+               <input id="imagen" type="file" name="imagen">
+          </div> 
+          <div class="submit">
+
+                    <button type="submit">Post</button>
+
+          </div>
+     </form>
+
+     </div>
+    </section>
+  </main>
+
+  <footer>
+    <%- include('./partials/footer') %>
+  </footer>
+</body>
+</html>

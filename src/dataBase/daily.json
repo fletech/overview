@@ -1,0 +1,42 @@
+[
+    {
+        "numeroDia": "001",
+        "title": "Signup formular",
+        "imagen": "/images/dailyUploads/formCompleto.jpg"
+    },
+    {
+        "numeroDia": "002",
+        "title": "Credit card checkout",
+        "imagen": "/images/dailyUploads/form.jpg"
+    },
+    {
+        "numeroDia": "003",
+        "title": "Landing page",
+        "imagen": "/images/dailyUploads/background.jpg"
+    },
+    {
+        "numeroDia": "004",
+        "title": "form",
+        "imagen": "/images/dailyUploads/formCompleto.jpg"
+    },
+    {
+        "numeroDia": "005",
+        "title": "form",
+        "imagen": "/images/dailyUploads/formCompleto.jpg"
+    },
+    {
+        "numeroDia": "006",
+        "title": "form",
+        "imagen": "/images/dailyUploads/formCompleto.jpg"
+    },
+    {
+        "numeroDia": "007",
+        "title": "landing",
+        "imagen": "/images/dailyUploads/DailyUI-007.JPG"
+    },
+    {
+        "numeroDia": "009",
+        "title": "Challenge",
+        "imagen": "/images/DailyUI-009.JPG"
+    }
+]

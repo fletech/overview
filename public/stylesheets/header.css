@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+body header {
+     max-height: 40vh;
+     min-height: 8vh;
+     background-color: #474747;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0px 100px;
+}
+
+body header > div {
+     width: 33.3%;
+     display: flex;
+     align-items: center;
+}
+
+
+body header div a{
+     color: white;
+     font-size: 1.6rem;
+     font-family: 'Fira Mono';
+}
+
+body header .logo a#facundoGarcia{
+     font-size: 1.7rem;
+     padding-left: 25px;     
+}
+
+body header .dailyUi{
+     font-size: 1.2rem;
+     justify-content: center;
+}
+
+body header .dailyUi a{
+     font-size: 1.2rem;
+}
+
+body header div.dailyUi a i{  
+     padding-left: 10px;
+     font-size: 0.8rem;
+}
+
+div.contactMe{
+     justify-content: flex-end;
+}
+
+div.contactMe a i{
+     font-size: 1.6rem;
+     padding: 0px 25px;
+}
+
+
+
