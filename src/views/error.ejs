@@ -1,3 +1,31 @@
+<section class="error">
+    
 <h1><%= message %></h1>
 <h2><%= error.status %></h2>
+<img src="/images/error404.png" alt="">
 <pre><%= error.stack %></pre>
+<a href="/admin/panel"><p>Home</p></a>
+</section>
+<style>
+     section {
+          display:flex; 
+          flex-direction: column;
+          justify-content: center; 
+          align-items: center;
+          font-family: Helvetica, sans-serif, Courier, monospace;
+     }
+     img{
+          width: auto;
+          height: 50vh;
+     }      
+     h2{
+          display: none;
+     }
+     pre{
+          display: none
+     }
+     a{
+          text-decoration: none;
+          color: #eb5757;
+     }
+</style>

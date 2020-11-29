@@ -1,0 +1,63 @@
+[
+     {
+          "listName" : "Soon...",
+          "icon" : "fas fa-dice-one",
+          "path" : "#",
+          "style" : "color:#EEF5DB"
+     },
+     {
+          "listName" : "More categories",
+          "icon" : "fas fa-dice-two",
+          "path" : "#",
+          "style" : "color:#C7EFCF"
+     },
+     {
+          "listName" : "To explore",
+          "icon" : "fas fa-dice-three",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#D6D1B1"
+     },
+     {
+          "listName" : "And to know",
+          "icon" : "fas fa-dice-four",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#F0B67F"
+     },
+     {
+          "listName" : "More about me",
+          "icon" : "fas fa-dice-five",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#FE5F55"
+     },
+     {
+          "listName" : "Soon...",
+          "icon" : "fas fa-dice-one",
+          "path" : "#",
+          "style" : "color:#BB342F"
+     },
+     {
+          "listName" : "More categories",
+          "icon" : "fas fa-dice-two",
+          "path" : "#",
+          "style" : "color:#DDA448"
+     },
+     {
+          "listName" : "To explore",
+          "icon" : "fas fa-dice-three",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#8CBCB9"
+     },
+     {
+          "listName" : "And to know",
+          "icon" : "fas fa-dice-four",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#C5CBD3"
+     },
+     {
+          "listName" : "More about me",
+          "icon" : "fas fa-dice-five",
+          "path" : "#",
+          "style" : "pointer-events:none; color:#8D6A9F"
+     }
+
+]

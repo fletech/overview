@@ -1,6 +1,8 @@
 @import url(/stylesheets/header.css);
-@import url(/stylesheets/sectionDailyUi.css);
-@import url(/stylesheets/newDaily.css);
+@import url(/stylesheets/dailyView.css);
+@import url(/stylesheets/dailyUiIndex.css);
+@import url(/stylesheets/newDailyForm.css);
+@import url(/stylesheets/overview.css);
 @import url(/stylesheets/footer.css);
 
 
@@ -10,14 +12,45 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, 
+                BlinkMacSystemFont, 
+                "Segoe UI", 
+                Roboto, 
+                Oxygen-Sans, 
+                Ubuntu, 
+                Cantarell, 
+                "Helvetica Neue", 
+                sans-serif;
   font-size: 16px;
   text-decoration: none;
+
 }
 
 a {
-  color: #00B7FF;
+  color: #7ac9e9;
 }
 
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #353535;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 240, 240);
+  height: 90%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(238, 106, 106);
+
+}
 
 

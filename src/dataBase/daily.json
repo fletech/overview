@@ -2,41 +2,60 @@
     {
         "numeroDia": "001",
         "title": "Signup formular",
-        "imagen": "/images/dailyUploads/formCompleto.jpg"
+        "imagen": "/images/dailyUploads/DailyUI-001.jpg"
     },
     {
         "numeroDia": "002",
         "title": "Credit card checkout",
-        "imagen": "/images/dailyUploads/form.jpg"
+        "imagen": "/images/dailyUploads/DailyUI-002.jpg"
     },
     {
         "numeroDia": "003",
         "title": "Landing page",
-        "imagen": "/images/dailyUploads/background.jpg"
+        "imagen": "/images/dailyUploads/DailyUI-004.jpeg",
+        "description": "I got to build a landing page. I've choose to make one for Sabrina Combina- Fotografa de 🇦🇷 ",
+        "file": "DailyUI-003"
     },
     {
         "numeroDia": "004",
-        "title": "form",
-        "imagen": "/images/dailyUploads/formCompleto.jpg"
+        "title": "Legal Buffet template",
+        "imagen": "/images/dailyUploads/DailyUI-004.png",
+        "file": "DailyUI-004",
+        "description": "Vittozi"
     },
     {
         "numeroDia": "005",
-        "title": "form",
-        "imagen": "/images/dailyUploads/formCompleto.jpg"
+        "title": "Web site template",
+        "imagen": "/images/dailyUploads/DailyUI-005.png",
+        "file": "DailyUI-005",
+        "description": "my own site"
     },
     {
-        "numeroDia": "006",
-        "title": "form",
-        "imagen": "/images/dailyUploads/formCompleto.jpg"
+        "numeroDia": "004",
+        "title": "Legal Buffet template",
+        "imagen": "/images/dailyUploads/DailyUI-004.png",
+        "file": "DailyUI-004",
+        "description": "Vittozi"
     },
     {
-        "numeroDia": "007",
-        "title": "landing",
-        "imagen": "/images/dailyUploads/DailyUI-007.JPG"
+        "numeroDia": "005",
+        "title": "Web site template",
+        "imagen": "/images/dailyUploads/DailyUI-005.png",
+        "file": "DailyUI-005",
+        "description": "my own site"
     },
     {
-        "numeroDia": "009",
-        "title": "Challenge",
-        "imagen": "/images/DailyUI-009.JPG"
+        "numeroDia": "004",
+        "title": "Legal Buffet template",
+        "imagen": "/images/dailyUploads/DailyUI-004.png",
+        "file": "DailyUI-004",
+        "description": "Vittozi"
+    },
+    {
+        "numeroDia": "005",
+        "title": "Web site template",
+        "imagen": "/images/dailyUploads/DailyUI-005.png",
+        "file": "DailyUI-005",
+        "description": "my own site"
     }
 ]

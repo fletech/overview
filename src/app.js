@@ -6,8 +6,9 @@ var logger = require('morgan');
 const fs = require('fs');
 
 
-var mainRouter = require('./routes/main');
-var usersRouter = require('./routes/users');
+
+var dailiesRouter = require('./routes/dailies');
+var overviewRouter = require('./routes/overview');
 var abmRouter = require('./routes/abm');
 
 var app = express();
@@ -24,9 +25,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 
 /////////// ROUTES ///////////
-app.use('/', mainRouter);
-app.use('/users', usersRouter);
+app.use('/dailies', dailiesRouter);
 app.use('/abm', abmRouter);
+app.use('/', overviewRouter);
+
 
 
 

@@ -1,0 +1,567 @@
+::-webkit-scrollbar {
+     width: 5px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: #e96868;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: #555;
+
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: rgb(238, 106, 106);
+
+   }
+
+   * i:hover{
+        color: #eb5757
+   }
+
+
+/* 0
+----------------------------------
+---------------Body---------------
+----------------------------------
+*/
+
+body#admin{
+     display: flex;
+     width: 100%;
+     overscroll-behavior-y: none;
+     position: relative;  
+ }
+
+
+
+/* 1
+----------------------------------
+---------HEADER VERTICAL----------
+----------------------------------
+*/
+ 
+body#admin header#panel{
+     align-items: center;
+     background-color: rgb(55, 60, 63);
+     color: #eb5757;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     justify-content: space-evenly;
+     min-height: 100vh;
+     padding: 0px 10px;
+     position: sticky;
+     top: 0px;
+     max-width: 30%;
+     width: 15%;
+}
+
+body#admin header#panel > div{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+}
+
+body#admin header#panel div.panelNav {
+     height: 60vh; 
+     overflow-y: scroll;
+     overflow-x: hidden;
+     width: 100%;
+}
+
+
+/* 1.1
+--------Header Input SEARCH----------
+*/
+
+
+header#panel{
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     height: 40px;
+     padding: 5px 0px;
+     position: relative;
+     border-right: solid 0.5px #4b4a4a;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+}
+header#panel a.logo{
+     position: absolute;
+     top: 10px;
+     left: 10px;
+}
+header#panel a.logo,
+header#panel a h2{
+     align-self: flex-start;
+     color: #e96868;
+
+}
+
+header#panel form {
+     display: flex;
+     width: 100%;
+     height: 100%;
+     margin-top: 50px;
+     
+}
+header#panel form label{
+     display: flex;
+     width: 100%;
+     height: 80%;
+     padding-bottom: 10px;
+}
+
+header#panel form input:focus + label,
+header#panel form input:active + label{
+     border-bottom: solid 1px #eb5757;
+     transition: all 0.3s ease;
+     cursor: text;
+
+}
+header#panel form label i{}
+header#panel form input{
+     background: none;
+     padding-left: 30px;
+     border: none;
+     outline: none;
+     position: absolute;
+     right: 0px;
+     width: 100%;
+     color: white;
+     cursor: text;
+}
+header#panel form input:focus{
+     background: none;
+     cursor: text;
+     
+}
+
+/* 1.2
+--------Header PANEL TOP-----------
+*/
+header#panel div.panelTop{
+     display: flex;
+     height: 150px;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-start;
+     border-top: solid 2px #464646;
+     border-bottom: solid 2px #464646;
+     padding: 20px 0px;
+
+}
+header#panel div.panelTop a{
+     padding-bottom: 0px;
+     
+}
+header#panel div.panelTop a p{
+     font-size: 14px;
+     color: #e9e9e9;
+
+}
+
+/* 1.3
+--------Header PANEL FAVORITES-----------
+*/
+
+header#panel p.favorites{
+     align-self: flex-start;
+     color: #c9c9c9;
+     padding: 20px 0px;
+
+     
+}
+
+header#panel div.panelNav nav {
+     width: 100%;
+}
+header#panel div.panelNav nav ul {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+
+     width: 100%;
+}
+header#panel div.panelNav nav ul a{
+     display: flex;
+     width: 90%;
+     align-items: center;
+     margin: 5px 0px;
+}
+
+header#panel div.panelNav nav ul a:hover{
+     background-color: #fabdbd4f;
+     transition: all 0.3s ease;
+}
+
+header#panel div.panelNav nav ul a i{
+     display: flex;
+     justify-content: flex-start;
+     
+     width: 20%;
+}
+header#panel div.panelNav nav ul a li{
+     list-style: none;
+     margin-left: 10px;
+     font-size: 0.9rem;
+     width: 100%;
+
+}
+
+
+/* 2
+----------------------------------
+---------MAIN CONTAINER-----------
+----------------------------------
+*/
+
+
+body#admin main#container{
+     display: flex;
+     background-color: rgb(49, 53, 56);
+     flex-direction: column;
+     position: relative;
+     width: 85%;
+}
+
+/* 2.1
+--------Main NAV SUPERIOR-----------
+*/
+#admin #container section.navSuperior{
+
+}
+#admin #container  nav.navTop{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     height: 6vh;
+     color: #c9c9c9;
+     padding: 0px 50px;
+     background-color: rgba(40, 41, 41, 0.753);
+     position: sticky;
+     top: 0;
+     z-index: 3;
+
+}
+
+
+ 
+#admin #container  nav.navTop div{
+     display: flex;
+     align-items: center;
+
+}
+
+#admin #container  nav.navTop div i{
+     padding-left: 20px;
+}
+
+
+
+
+/* 2.2
+--------IMAGEN COVER-----------
+*/
+
+#admin #container div.imgCover{
+     position: relative;
+     height: 35vh;
+     width: 100%;
+     overflow: hidden;
+     overscroll-behavior: none;
+     background-color: #302f2f;
+     opacity: 0.6;
+     z-index: 2;
+
+
+}
+#admin #container div.imgCover img{
+     height: 35vh;
+     width: 100%;
+     object-fit: cover;
+     object-position: bottom 0%;
+     position: absolute;
+     /* opacity: 0.5; */
+     overscroll-behavior: none;
+     /* filter: grayscale(60%);
+     filter: sepia(70%); */
+}
+
+
+
+/* 3
+----------------------------------
+--------------MAIN----------------
+----------------------------------
+*/
+
+body#admin main#container{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     width: 100%;
+}
+
+/* 3.1
+--------TITLE and EMOTICON--------
+*/
+
+body#admin main article{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+}
+
+body#admin main#container article div.heading{
+     align-self: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     width: 80%;
+     position: relative;
+     padding: 0px 20px;
+
+}
+body#admin main#container article div.heading span{
+     top: -45px;
+     position: absolute;
+     font-size: 65px;
+     z-index: 2;
+     background-color: rgba(255,255,255,0.3);
+     width: 90px;
+     height: 90px; 
+     text-align: center; 
+     margin-bottom: 10px;
+     border-radius: 50px;
+}  
+body#admin main#container article div.heading h3{
+     margin-top: 50px;
+     font-size: 30px;
+     color: #e9e9e9;
+}
+
+
+
+
+ /* 3.2
+--------------MAIN .including--------------
+--------------Dinamics  Views--------------
+-------------------Frame------------------*/
+
+body#admin main#container section.including{
+     width:80%;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+
+}
+
+/* 3.2.random
+-----------quotes-----------
+*/
+body#admin main section.quotes{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+     align-self: center;
+     min-height: 50vh;
+     color: #e9e9e9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* View: DAILY UPLOAD FORM
+-----------form DAILY-----------
+*/
+@media screen and (max-width: 1420px ){
+section.form {
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     justify-content: center;
+     background-color: rgb(49, 53, 56);
+ }
+ section.form .cajaForm{
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     height: 90%;
+     justify-content: center;
+     transition: all 0.3s ease;
+     width: 50%;
+
+ }
+
+
+ section.form .cajaForm .heading{
+     align-items: center;
+
+     border-bottom: solid 1px rgb(247, 107, 83);
+     border-radius: 30px;
+     display: flex;
+     height: 5%;
+     justify-content: center;
+     margin-top: 50px;
+     width: 60%;
+
+ }
+ section.form .heading label{
+     color: white;
+     cursor: pointer;
+     display: inline;
+     font-size: 1.2rem;
+     font-weight: normal;
+     text-align: center;
+     width: 100%;
+ }
+ section.form form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 60%;
+     height: 90%;
+
+ }
+
+ section.form form > div{
+      margin: 10px 0px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+ }
+
+ section.form form div label{
+     color: #c0bebe;
+}
+
+
+
+ section.form form > div input,
+ section.form form > div select{
+     border: none;
+     border-bottom: solid 1px #eaeaea;
+     outline: none;
+     margin-top: 10px;
+     padding: 0px 0px 10px 0px;
+     color: #c0bebe;
+     background-color: rgb(49, 53, 56)
+      
+ }
+
+ section.form form > div input:focus,
+ section.form form > div select:focus{
+     transition: all 0.3s ease;
+     border-bottom: solid 2px rgb(247, 107, 83);
+
+}
+
+
+
+
+
+ section.form form .submit{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(49, 53, 56);
+      border-radius: 25px;
+ }
+
+ section.form form .submit button {
+     border: none;
+     background: none;
+     color: white;
+     font-size: 1.2rem;
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+ }
+ 
+}
+
+
+
+/* 
+------------------------------------
+---------------FOOTER---------------
+------------------------------------*/
+
+
+body#admin main#container footer#footerAdmin {
+
+    background-color: rgb(55, 60, 63);
+    color: rgba(255,255,255,0.9);
+    width: 100%;
+    position: sticky;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+}
+
+#admin #container footer#footerAdmin {
+     text-align: center;
+     padding: 10px;
+     border-top: solid 0px #e9e9e9;
+     border-bottom: solid 0px #e9e9e9;
+
+}
+
+#admin #container footer#footerAdmin h3, footer#footerAdmin p{
+     color: #c9c9c9;
+     padding-bottom: 0px;
+     margin: 0px 15px
+}
+
+#admin #container footer .contactMe a i{
+     color: #c9c9c9;
+}
+#admin #container footer#footerAdmin a i.fa-lock{
+     color: #c9c9c9;
+     position: absolute;
+
+}
+ 
+#admin #container footer#footerAdmin div.contactMe{
+     justify-content: center;
+     margin: 0px 15px
+
+}
+
+#admin #container footer#footerAdmin div.contactMe a i{
+     font-size: 1.2rem;
+     padding: 0px 5px;
+}
+ 
+ 
+ 
+ 
+ 

@@ -16,12 +16,15 @@
     <section class="newDailyForm">
      <div class="cajaForm">
 
-     <h2>New Daily</h2>
+      <div class="heading" >
+        <label for="numeroDia">New Daily</label>
+      </div>
+
       <form action="" method="POST" enctype="multipart/form-data">
           <div class="dia">
                <label for="numeroDia">Day nº</label>
                <!-- <input id="numeroDia" type="text"  name="numeroDia"> -->
-               <select name="numeroDia" id="numeroDia" placeholder="ej: '001'" >
+               <select name="numeroDia" id="numeroDia" placeholder="ej: '001'" required >
                     <% for(let i= 0; i<100; i++) {%>
                          <% if (i <= 8)  {%>
                          <option value="<%= `00${i+1}` %>"><%= `00${i+1}` %></option>
@@ -34,15 +37,19 @@
           </div>
           <div class="title">
                <label for="title">Challenge Name</label>
-               <input id="title" type="text" placeholder="Premisa" name="title">
+               <input id="title" type="text" placeholder="Challenge" name="title" autocomplete="off" required>
           </div>
+          <div class="description">
+            <label for="description">Description</label>
+            <input id="description" type="text" placeholder="Tell us what you've done" name="description" autocomplete="off" required>
+       </div>
           <div class="imagen">
                <label for="imagen">Image</label>
-               <input id="imagen" type="file" name="imagen">
+               <input id="imagen" type="file" name="imagen" required>
           </div> 
           <div class="submit">
 
-                    <button type="submit">Post</button>
+                    <button type="submit"><i class="fas fa-upload"></i> Upload</button>
 
           </div>
      </form>

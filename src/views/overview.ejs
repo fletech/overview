@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%-title %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  </head>
+
+<body id="admin">
+
+<!-- ------------------------------------------------------------- -->
+<!-- ------------------------SIDE HEADER------------------------- -->
+<!-- ------------------------------------------------------------- -->
+  
+  <header id="panel">
+    <a href="/" class="logo"><h2>#facundoGarcia</h2></a>
+
+    <!-- -----------------SEARCH----------------- -->
+
+    <form action="" method="GET">
+      <input type="text" name="search" id="search" autocomplete="off" required placeholder="Find quickly">
+      <label for="search">
+        <i class="fas fa-search"></i>
+      </label>
+    </form>
+
+    <!-- ---------------PANEL TOP--------------- -->
+    
+    <div class="panelTop">
+
+      <a href="/quotes"><p>About me</p></a>
+      <a href="/quotes"><p>Movies quotes</p></a>
+      <a href="/dailyUi"><p>DailyUi Challenge</p></a>
+      <a href="/dailyUi"><p>Contact me</p></a>
+      
+    </div>
+
+    <!-- ---------------FAVORITES--------------- -->
+
+    <p class="favorites">Menu</p>
+    <div class="panelNav">
+      
+      <nav>
+          <ul>
+
+        <% for(let i = 0; i<dataBase.length; i++){ %>
+      
+          <a href="<%=dataBase[i].path%>" style="<%= dataBase[i].style%>">
+            <i class="fas fa-<%= dataBase[i].icon%>"></i>
+            <li><%=dataBase[i].listName %></li>
+          </a>
+    
+        <% } %> 
+
+          </ul>
+      </nav>
+    </div>
+
+    <!-- ----------------PANEL FOOTER---------------- -->
+
+    <div class="panelFooter">
+      © fletech  
+    </div>
+
+  </header>
+
+<!-- ------------------------------------------------------------- -->
+<!-- ----------------------------MAIN----------------------------- -->
+<!-- ------------------------------------------------------------- -->
+  
+  <main id="container">
+
+    <!-- -------------NAV BAR TOP---------------- -->
+
+      <nav class="navTop">
+        <h3 style="text-align: left;"><%=h3%> </h3>
+
+        <div>
+          <a href=""><i class="fas fa-inbox"></i></a>
+          <a href="/abm"><i class="fas fa-folder "></i></a>
+          <a href=""><i class="fas fa-sign-in-alt"></i></a>
+        </div>
+
+      </nav>
+
+
+    <!-- ----------------IMG COVER---------------- -->
+    <div class="imgCover">
+      <div class="layout">
+      <img src="/images/convertidas/cuestaBlanca.jpg" alt="">
+      </div>
+    </div>
+    
+    <!-- ---------Main TITLE and EMOTICON---------- -->
+    <article>
+
+      <div class="heading">
+        
+        <span><%=emoticons[Math.floor(Math.random() * emoticons.length)]%></span>
+        <h3><%= title %> </h3>
+      </div>
+
+    </article>
+    
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------RENDERED----------------------------- -->
+
+    <section class="including">
+          
+
+          <%- include(`./partials/${view}`) %> 
+          <!--DailyCards-->
+        
+    </section>
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- -----------------------------FOOTER------------------------------ -->
+<!-- ----------------------------------------------------------------- -->  
+
+    <footer id="footerAdmin">
+      <h3>Facundo García</h3>
+
+      <p>FullStack Developer</p>
+ 
+      <div class="contactMe">
+           <%- include('./partials/contactMe') %>
+      </div>
+      <a href="/abm" target="_blank"><i class="fas fa-lock"></i></a>
+    </footer>
+  </main>
+
+</body>
+</html>

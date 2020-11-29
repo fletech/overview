@@ -9,7 +9,7 @@ const multer = require('multer')
 
 var storage = multer.diskStorage({
      destination: function (req, file, cb) {
-       cb(null, 'public/images') 
+       cb(null, 'public/images/dailyUploads') 
      },
      filename: function (req, file, cb) {
        cb(null, 'DailyUI-'+req.body.numeroDia+path.extname(file.originalname))

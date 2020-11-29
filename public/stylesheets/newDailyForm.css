@@ -3,34 +3,51 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     height: 70vh;
+     height: 73.5vh;
+     background-color: #ffffff;
  }
  section.newDailyForm .cajaForm{
-     height: 80%;
+     height: 90%;
      width: 50%;
      display: flex;
      flex-direction: column;
-     justify-content: flex-start;
+     justify-content: center;
      align-items: center;
-     border: solid 1px #eaeaea;
      transition: all 0.3s ease;
+     background-color: #ffffff;
+
  }
 
  section.newDailyForm .cajaForm:hover{
-      box-shadow: 2px 2px 10px #eaeaea, -2px -2px 10px #eaeaea;
+      box-shadow: 2px 2px 10px #c0bebe, -2px -2px 10px #cac9c9;
  }
- section.newDailyForm h2{
+ section.newDailyForm .cajaForm .heading{
+     margin-top: 15px;
+    width: 60%;
+    height: 10%;
+    border-bottom: solid 1px rgb(247, 107, 83);
+    border-radius: 30px;
+    background-color:#fa5252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ section.newDailyForm .heading label{
+     display: inline;
      width: 100%;
-     height: 10%;
      text-align: center;
-     background-color: tomato;
+     color: white;
+     font-size: 1.6rem;
+     font-weight: normal;
+     cursor: pointer;
  }
  section.newDailyForm form{
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     width: 80%;
+     width: 60%;
      height: 90%;
 
  }
@@ -39,7 +56,7 @@
       margin: 10px 0px;
       display: flex;
       flex-direction: column;
-      width: 70%;
+      width: 100%;
  }
 
  section.newDailyForm form > div input,
@@ -49,12 +66,13 @@
       outline: none;
       margin-top: 10px;
       padding: 0px 0px 10px 0px;
+      
  }
 
  section.newDailyForm form > div input:focus,
  section.newDailyForm form > div select:focus{
      transition: all 0.3s ease;
-     border-bottom: solid 2px tomato;
+     border-bottom: solid 2px rgb(247, 107, 83);
 
 }
 
@@ -67,24 +85,20 @@
  section.newDailyForm form .title{}
  section.newDailyForm form .title{}
 
- section.newDailyForm form .imagen[type='file']{
-     border: none;
-     border-bottom: solid 1px tomato;
- }
- section.newDailyForm input #file-upload-button{
-    border: none;
-    border-bottom: solid 1px tomato;
+  
+ section.newDailyForm label.imagen{
+    
  }
  section.newDailyForm form .imagen{}
 
 
  section.newDailyForm form .submit{
-      width: 40%;
+      width: 100%;
       height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: tomato;
+      background-color: #fa5252;
       border-radius: 25px;
  }
 
@@ -92,10 +106,13 @@
      border: none;
      background: none;
      color: white;
-     font-size: 20px;
+     font-size: 1.2rem;
      width: 100%;
      height: 100%;
      cursor: pointer;
  }
  section.newDailyForm {}
  section.newDailyForm {}
+
+
+
