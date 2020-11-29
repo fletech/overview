@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 
-let baseDatos = fs.readFileSync(path.join(__dirname ,'../database/daily.json'), 'utf8');
+let baseDatos = fs.readFileSync(path.join(__dirname ,'../dataBase/daily.json'), 'utf8');
 baseDatos = JSON.parse(baseDatos)
 
 
