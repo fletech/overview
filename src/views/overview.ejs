@@ -73,12 +73,12 @@
     <!-- -------------NAV BAR TOP---------------- -->
 
       <nav class="navTop">
-        <h3 style="text-align: left;"><%=h3%> </h3>
+        <h3 style="text-align: left;"><%=title%> </h3>
 
         <div>
           <a href=""><i class="fas fa-inbox"></i></a>
           <a href="/abm"><i class="fas fa-folder "></i></a>
-          <a href=""><i class="fas fa-sign-in-alt"></i></a>
+          <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
         </div>
 
       </nav>
@@ -87,7 +87,7 @@
     <!-- ----------------IMG COVER---------------- -->
     <div class="imgCover">
       <div class="layout">
-      <img src="/images/convertidas/cuestaBlanca.jpg" alt="">
+      <img src="/images/convertidas/background4.jpg" alt="">
       </div>
     </div>
     
@@ -96,8 +96,8 @@
 
       <div class="heading">
         
-        <span><%=emoticons[Math.floor(Math.random() * emoticons.length)]%></span>
-        <h3><%= title %> </h3>
+        <span><%=avatar%></span>
+        <h3><%= h3 %> </h3>
       </div>
 
     </article>

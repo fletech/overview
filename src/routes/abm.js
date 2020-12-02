@@ -1,11 +1,9 @@
 let express = require ('express')
-const path = require('path');
-
 let router = express.Router()
-const abmController = require ('../controllers/abmController')
+const path = require('path');
+const multer = require('multer');
 
-
-const multer = require('multer')
+const abmController = require ('../controllers/abmController');
 
 var storage = multer.diskStorage({
      destination: function (req, file, cb) {
@@ -17,8 +15,6 @@ var storage = multer.diskStorage({
    })
    
    var upload = multer({ storage: storage })
-
-
 
 
 

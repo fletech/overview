@@ -10,6 +10,7 @@ const fs = require('fs');
 var dailiesRouter = require('./routes/dailies');
 var overviewRouter = require('./routes/overview');
 var abmRouter = require('./routes/abm');
+var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -24,10 +25,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 
+
 /////////// ROUTES ///////////
 app.use('/dailies', dailiesRouter);
 app.use('/abm', abmRouter);
 app.use('/', overviewRouter);
+app.use('/users', usersRouter)
 
 
 

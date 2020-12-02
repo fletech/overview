@@ -1,0 +1,78 @@
+     <section class="users">
+          <!-- LOGIN -->
+     <% if (h3 == 'Log in') {  %> 
+     
+          <form action="" method='POST'>
+               <div>
+                    <small>Are you an Admin?</small>
+                    <small>Not yet? 
+                         <a href="/users/register">Sign up</a>
+                    </small>
+               </div>
+
+               <div class="field">
+                    <label for="email">Email
+                         <input type="email" name="email" id="email">
+                    </label>
+               </div>
+               
+               <div class="field">
+                    <label for="password">Password
+                         <input type="password" name="Password" id="password">
+                    </label>
+                    
+               </div>
+
+               <div>
+                    <button type="submit">Log in</button>
+               </div>
+
+                    
+          </form>
+     </section>
+
+          <!-- SIGNUP -->
+     <% } else { %>
+          <form action="" method='POST'>
+
+               <div class="field">
+                    <label for="email">Name
+                         <input type="text" name="name" id="name">
+                    </label>
+               </div>
+
+               <div class="field">
+                    <label for="email">Email de register
+                         <input type="email" name="email" id="email">
+                    </label>
+               </div>
+               
+               <div class="field">
+                    <label for="password">Password de register
+                         <input type="password" name="password" id="password">
+                    </label>
+               </div>
+
+               <div class="field validation">
+                    <label for="codeValidation">Validation code
+                         <input type="password" name="codeValidation" id="codeValidation">
+                    </label>     
+               </div>
+
+               <div>
+                    <small>if you even do not have one, get in touch with  
+                         <a href="mailto:facundogarcia.ar@gmail.com">Facundo</a>
+                    </small>
+               </div>
+
+               <div>
+                    <button type="submit">Sign up</button>
+               </div>
+          </form>
+     </section>
+     <% } %> 
+
+
+
+
+     

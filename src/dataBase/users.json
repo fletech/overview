@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Facundo Garcia",
+        "email": "facugarciacac@gmail.com",
+        "password": "$2a$10$lUps4hpvHnbUq8y01sA/R.U4j82n65ynO0siY2Br8SXKRC1aA8dyK",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok"
+    },
+    {
+        "name": "Vicky Capella",
+        "email": "mvictoriacapella@gmail.com",
+        "password": "$2a$10$YtlKOWW.KqijQKpg/Q26IevnmY7V.gS4IFu./ThcaNV6wDRIBWP9y",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok"
+    }
+]
