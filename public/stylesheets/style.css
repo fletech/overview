@@ -2,7 +2,9 @@
 @import url(/stylesheets/dailyView.css);
 @import url(/stylesheets/dailyUiIndex.css);
 @import url(/stylesheets/newDailyForm.css);
+@import url(/stylesheets/darkOverview.css);
 @import url(/stylesheets/overview.css);
+@import url(/stylesheets/users.css);
 @import url(/stylesheets/footer.css);
 
 
@@ -30,27 +32,5 @@ a {
   color: #7ac9e9;
 }
 
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #353535;
-
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(241, 240, 240);
-  height: 90%;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(238, 106, 106);
-
-}
 
 

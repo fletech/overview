@@ -3,10 +3,17 @@
   <head>
     <title><%-title %> </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
+<% if (locals.idBody != undefined) { %>
+  <body id="<%= idBody %>">
+ 
+<% } else {%>
+  <body id="admin">
+<% } %>
 
-<body id="admin">
 
 <!-- ------------------------------------------------------------- -->
 <!-- ------------------------SIDE HEADER------------------------- -->
@@ -24,16 +31,7 @@
       </label>
     </form>
 
-    <!-- ---------------PANEL TOP--------------- -->
     
-    <div class="panelTop">
-
-      <a href="/quotes"><p>About me</p></a>
-      <a href="/quotes"><p>Movies quotes</p></a>
-      <a href="/dailyUi"><p>DailyUi Challenge</p></a>
-      <a href="/dailyUi"><p>Contact me</p></a>
-      
-    </div>
 
     <!-- ---------------FAVORITES--------------- -->
 
@@ -43,11 +41,11 @@
       <nav>
           <ul>
 
-        <% for(let i = 0; i<dataBase.length; i++){ %>
+        <% for(let i = 0; i<ddbb.listCategories.length; i++){ %>
       
-          <a href="<%=dataBase[i].path%>" style="<%= dataBase[i].style%>">
-            <i class="fas fa-<%= dataBase[i].icon%>"></i>
-            <li><%=dataBase[i].listName %></li>
+          <a href="<%=ddbb.listCategories[i].path%>" style="<%= ddbb.listCategories[i].style%>">
+            <i class="fas fa-<%= ddbb.listCategories[i].icon%>"></i>
+            <li><%=ddbb.listCategories[i].listName %></li>
           </a>
     
         <% } %> 
@@ -55,8 +53,67 @@
           </ul>
       </nav>
     </div>
+    <!-- ---------------PANEL Bottom--------------- -->
+    
+    <div class="panelBottom">
+
+      <a href="/quotes"><p>About me</p></a>
+      <a href="/quotes"><p>Movies quotes</p></a>
+      <a href="/dailyUi"><p>DailyUi Challenge</p></a>
+      <a href="/dailyUi"><p>Contact me</p></a>
+      
+    </div>
 
     <!-- ----------------PANEL FOOTER---------------- -->
+    <% if (typeof classMode != 'undefined') { %>
+        <% if (classMode == 'dark') { %>
+
+          <div class="mode">
+            <span class="material-icons">
+              wb_sunny
+              </span>
+            <div class="toggleDark toggleLight">
+              <a href="/:mode/light">.</a>
+            </div> 
+            <span class="material-icons">
+              brightness_2
+              </span>
+
+          </div>
+      <% } else { %>
+
+        <div  class="mode">
+          <span class="material-icons">
+            wb_sunny
+            </span>
+          <div class="toggleDark toggleLight">
+            <a href="/:mode/dark">.</a>
+          </div> 
+          <span class="material-icons">
+            brightness_2
+            </span>
+        </div>
+
+      <% }%>
+       
+     <% } else { %>
+
+      <div  class="mode">
+        <span class="material-icons">
+          wb_sunny
+          </span>
+        <div class="toggleDark toggleLight">
+          <a href="/:mode/dark">.</a>
+        </div> 
+        <span class="material-icons">
+          brightness_2
+          </span>
+      </div>
+      
+    <% } %>
+    
+  
+    
 
     <div class="panelFooter">
       © fletech  
@@ -76,11 +133,17 @@
         <h3 style="text-align: left;"><%=title%> </h3>
 
         <div>
+          
+        <% if (typeof user != 'undefined') { %>
           <a href=""><i class="fas fa-inbox"></i></a>
           <a href="/abm"><i class="fas fa-folder "></i></a>
-          <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-        </div>
+          <a href="/"><i class="fas fa-user "></i></a>
+          <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
 
+        <% } else { %>
+          <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+        <% } %>
+        </div> 
       </nav>
 
 

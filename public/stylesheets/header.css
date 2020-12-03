@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
 
-body header {
+body header#dailyView {
      max-height: 40vh;
      min-height: 8vh;
      background-color: #474747;
@@ -10,34 +10,34 @@ body header {
      padding: 0px 100px;
 }
 
-body header > div {
+body header#dailyView > div {
      width: 33.3%;
      display: flex;
      align-items: center;
 }
 
 
-body header div a{
+body header#dailyView div a{
      color: white;
      font-size: 1.6rem;
      font-family: 'Fira Mono';
 }
 
-body header .logo a#facundoGarcia{
+body header#dailyView .logo a#facundoGarcia{
      font-size: 1.7rem;
      padding-left: 25px;     
 }
 
-body header .dailyUi{
+body header#dailyView .dailyUi{
      font-size: 1.2rem;
      justify-content: center;
 }
 
-body header .dailyUi a{
+body header#dailyView .dailyUi a{
      font-size: 1.2rem;
 }
 
-body header div.dailyUi a i{  
+body header#dailyView div.dailyUi a i{  
      padding-left: 10px;
      font-size: 0.8rem;
 }

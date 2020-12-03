@@ -1,18 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const fs = require('fs');
+const session =require ('express-session');
+const usersMiddleware =require ('./middlewares/userLoggedMiddleware');
+const modeMiddleware =require ('./middlewares/modeMiddleware');
 
 
 
-var dailiesRouter = require('./routes/dailies');
-var overviewRouter = require('./routes/overview');
-var abmRouter = require('./routes/abm');
-var usersRouter = require('./routes/users');
 
-var app = express();
+const dailiesRouter = require('./routes/dailies');
+const overviewRouter = require('./routes/overview');
+const abmRouter = require('./routes/abm');
+const usersRouter = require('./routes/users');
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +27,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(session( {secret: 'lamaquinadehacerpajaros'} ));
+app.use(usersMiddleware.userLogged)
+app.use(modeMiddleware.idBody)
+app.use(modeMiddleware.classMode)
 
 
 
@@ -30,6 +38,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/dailies', dailiesRouter);
 app.use('/abm', abmRouter);
 app.use('/', overviewRouter);
+app.use('/:mode', overviewRouter);
 app.use('/users', usersRouter)
 
 

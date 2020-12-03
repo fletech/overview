@@ -1,43 +1,69 @@
-const path = require('path');
-const fs = require('fs');
+let ddbb= require('./ddbb')
 
-let dataBase = JSON.parse(fs.readFileSync(path.join(__dirname, '../dataBase/listCategories.json'), 'utf-8'));
-let dailyDB = JSON.parse(fs.readFileSync(path.join(__dirname, '../dataBase/daily.json'), 'utf-8'));
-let emoticons = JSON.parse(fs.readFileSync(path.join(__dirname, '../dataBase/emoticons.json'), 'utf-8'));
-let quotes = require ('../javascripts/randomQuotes');
-
-const emoticon = () => {return emoticons[Math.floor(Math.random() * emoticons.length)]};
+const emoticon = () => {return ddbb.emoticons[Math.floor(Math.random() * ddbb.emoticons.length)]};
 
 
 
-
-
-let usersController = {
+let overviewController = {
   dailyUi :  function(req, res, next){
-    res.render('overview', {title: 'Daily UI Challenge',h3: 'Dailies',dataBase,baseDatos: dailyDB, avatar: emoticon(), quote: undefined,view:'dailyUi', })
+    return res.render('overview', {
+      avatar: emoticon(), 
+      ddbb,
+      h3: 'Dailies', 
+      quote: undefined,
+      title: 'Daily UI Challenge',
+      view:'dailyUi', 
+    })
   },
   overview :  function(req, res, next) {
-      res.render('overview', { title : 'Overview', 
-                                    h3 : 'Overview',
-                                    view: 'dailyUi',
-                                    dataBase, baseDatos: 
-                                    dailyDB, 
-                                    avatar:emoticon(), 
-                                    quotes});
+      return res.render('overview', { 
+        avatar:emoticon(), 
+        ddbb,
+        h3 : 'Home',
+        title : 'Overview', 
+        view: 'dailyUi',
+      });
           
   },
   quote :  function(req, res, next){
 
-      let quote = quotes[req.params.id]
+      let quote = ddbb.quotes[req.params.id]
 
-      res.render('overview', {title: 'Random movie quotes', h3: 'Quotes', dataBase,baseDatos: dailyDB,avatar:emoticon(),quote, view:'quotes'})
+     return res.render('overview', {
+        avatar:emoticon(),
+        ddbb,
+        h3: 'Quotes', 
+        quote, 
+        title: 'Random movie quotes', 
+        view:'quotes'
+      })
 
   },
   quotes :  function(req, res, next){
-      res.render('overview', {title: 'Click to get a new quote',h3: 'Quotes',dataBase,baseDatos: dailyDB,avatar:emoticon(), quote: undefined,view:'quotes'})
+      return res.render('overview', {
+        avatar:emoticon(), 
+        ddbb,
+        h3: 'Quotes',
+        quote: undefined,
+        title: 'Click to get a new quote',
+        view:'quotes'})
   },
+  light :  function(req, res, next) {
+    req.session.idBody = 'admin';
+    req.session.classMode = 'light'
+    
+    return res.redirect(req.header('Referer') || '/');   
+  },
+  dark :  function(req, res, next) {
+
+    req.session.idBody = 'adminDark';
+    req.session.classMode = 'dark'
+    
+    return res.redirect(req.header('Referer') || '/'); 
+},
+
      
 }
- module.exports = usersController
+ module.exports = overviewController
 
  

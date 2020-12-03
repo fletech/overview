@@ -1,16 +1,82 @@
 [
     {
-        "name": "Facundo Garcia",
-        "email": "facugarciacac@gmail.com",
-        "password": "$2a$10$lUps4hpvHnbUq8y01sA/R.U4j82n65ynO0siY2Br8SXKRC1aA8dyK",
+        "name": "Maria Victoria",
+        "email": "mvictoriacapella@gmail.com",
+        "password": "$2a$10$JvQGHXOJNdLAdJG74Qrel.YDdlFP0xKMpkTcc/q4HDJP4laRBaKm.",
         "avatar": "this feature is not available yet",
-        "codeValidation": "Ok"
+        "codeValidation": "Ok",
+        "rol": "Admin"
     },
     {
-        "name": "Vicky Capella",
-        "email": "mvictoriacapella@gmail.com",
-        "password": "$2a$10$YtlKOWW.KqijQKpg/Q26IevnmY7V.gS4IFu./ThcaNV6wDRIBWP9y",
+        "name": "Facundo Garcia",
+        "email": "facugarciacac@gmail.com",
+        "password": "$2a$10$2RoTYq.kOwDDQWALueMd8.Ho4JQOlsEDn6geM4lF7.fo4p/O/11uK",
         "avatar": "this feature is not available yet",
-        "codeValidation": "Ok"
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "austin",
+        "email": "agus@gmail.com",
+        "password": "$2a$10$VV.WkMQAZJ9ptu318ynk7uTkZWJ7OQqZzVAp2b2vYGrCG.970sH0u",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "vicky",
+        "email": "vic@gmail.com",
+        "password": "$2a$10$BHuWVPXhv185usTOXJO1KeR79gPeF34pTAH5KxWd2EYAazdOm/9y.",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "fletito",
+        "email": "flete@gmail.com",
+        "password": "$2a$10$k.NWA3onnmmRWd/PAR2DeeVRjt95FJDAx.k.Fb5KgvY2nxHoJ1yrm",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "Facundo Garcia",
+        "email": "facugarciacac@gmail.com",
+        "password": "$2a$10$aINJDBvcyPas2LmhCZ7ILe76Lj8hjjgQrOsRA3Tx3.ThgD0SHQhOS",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "flete2",
+        "email": "fllete@gmail.com",
+        "password": "$2a$10$YAZP54dP8SpjHq0Hlk1FquqOnTZox8yO8.lCetJzR05lLvipoTSiO",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "Facundo Garcia",
+        "email": "facugarciacac@gmail.com",
+        "password": "$2a$10$6oV654LlAY2jD6HIA85Bj.FUtp9CRfTZOKKSGUFDRCh6wyttZz94.",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "Facundo Garcia",
+        "email": "facugarciacac@gmail.com",
+        "password": "$2a$10$Ft1QFKQtvjRXkfmTLdMeoeAz.V0nXOkGtNjBAitvkTDs7S70FTMPS",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
+    },
+    {
+        "name": "juan",
+        "email": "juangarmuzzi@gmail.com",
+        "password": "$2a$10$QtRDNru07RqrOwmgfJfpS.gH6SYkKlZNuuneM5biLds8WXNzXI5rW",
+        "avatar": "this feature is not available yet",
+        "codeValidation": "Ok",
+        "rol": "Admin"
     }
 ]

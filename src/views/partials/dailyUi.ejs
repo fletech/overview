@@ -1,6 +1,6 @@
 
 <section class="dailyUi">
-<% for (let i=0; i<baseDatos.length; i++) { %> 
+<% for (let i=0; i<ddbb.dailyDB.length; i++) { %> 
      
      <!--DailyCards-->
    
@@ -8,12 +8,12 @@
      <a href="/dailies/<%=(i+1)%>" class="boxLink">
        <div class="contenedorImagen">
 
-           <img src=<%=`${baseDatos[i].imagen}`%> alt="">
+           <img src=<%=`${ddbb.dailyDB[i].imagen}`%> alt="">
 
        </div>
        <div class="infoCaja">
-           <h3>Daily UI <%= baseDatos[i].numeroDia %></h3>
-           <p><%= baseDatos[i].title %></p>
+           <h3>Daily UI <%= ddbb.dailyDB[i].numeroDia %></h3>
+           <p><%= ddbb.dailyDB[i].title %></p>
        </div>
      </a>
    </div>

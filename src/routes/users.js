@@ -9,6 +9,7 @@ const usersController = require ('../controllers/usersController');
 
 router.get('/login', usersController.usersLogin);
 router.post('/login', usersController.login);
+router.get('/logout', usersController.logout);
 router.get('/register', usersController.usersRegister);
 router.post('/register', usersController.register);
 
