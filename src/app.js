@@ -35,10 +35,11 @@ app.use(modeMiddleware.classMode)
 
 
 /////////// ROUTES ///////////
+app.use('/', overviewRouter);
+app.use('/about', overviewRouter);
+app.use('/:mode', overviewRouter);
 app.use('/dailies', dailiesRouter);
 app.use('/abm', abmRouter);
-app.use('/', overviewRouter);
-app.use('/:mode', overviewRouter);
 app.use('/users', usersRouter)
 
 

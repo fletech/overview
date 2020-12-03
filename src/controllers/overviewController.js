@@ -21,10 +21,20 @@ let overviewController = {
         ddbb,
         h3 : 'Home',
         title : 'Overview', 
-        view: 'dailyUi',
+        view: 'home',
       });
           
   },
+  aboutMe :  function(req, res, next) {
+    return res.render('overview', { 
+      avatar:ddbb.emoticons[4], 
+      ddbb,
+      h3 : 'About me',
+      title : 'A quickly look about me...', 
+      view: 'aboutMe',
+    });
+        
+},
   quote :  function(req, res, next){
 
       let quote = ddbb.quotes[req.params.id]

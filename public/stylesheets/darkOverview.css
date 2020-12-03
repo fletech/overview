@@ -1,26 +1,4 @@
 
-body#adminDark::-webkit-scrollbar {
-     width: 5px;
-   }
-   
-   /* Track */
-   body#adminDark::-webkit-scrollbar-track {
-     background: #353535;
-   
-   }
-   
-   /* Handle */
-   body#adminDark::-webkit-scrollbar-thumb {
-     background: rgb(116, 115, 115);
-     height: 90%;
-   }
-   
-   /* Handle on hover */
-   body#adminDark::-webkit-scrollbar-thumb:hover {
-     background: rgb(238, 106, 106);
-   
-   }
-   
 
 /* 0
 ----------------------------------
@@ -100,6 +78,7 @@ body#adminDark header#panel form {
      width: 100%;
      height: 100%;
      margin-top: 50px;
+     position: relative;
      
 }
 body#adminDark header#panel form label{
@@ -124,6 +103,7 @@ body#adminDark header#panel form input{
      outline: none;
      position: absolute;
      right: 0px;
+     bottom: 10px;
      width: 100%;
      color: white;
      cursor: text;
@@ -141,7 +121,7 @@ body#adminDark header#panel form input:focus{
 body#adminDark header#panel p.favorites{
      align-self: flex-start;
      color: #c9c9c9;
-     padding: 20px 0px;
+     padding: 10px 0px;
 
      
 }
@@ -191,8 +171,8 @@ body#adminDark header#panel div.panelBottom{
      flex-direction: column;
      height: 150px;
      justify-content: space-between;
-     border-top: solid 2px #464646;
-     border-bottom: solid 2px #464646;
+     border-top: solid 1px #2e2e2e;
+     border-bottom: solid 1px #2e2e2e;
      padding: 20px 0px;
      margin: 15px 0px;
 
@@ -388,6 +368,7 @@ body#adminDark main#container article div.heading span{
      text-align: center; 
      margin-bottom: 10px;
      border-radius: 50px;
+     border: solid 1px #686868
 }  
 body#adminDark main#container article div.heading h3{
      margin-top: 50px;

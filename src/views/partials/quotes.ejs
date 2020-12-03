@@ -7,6 +7,12 @@
           <h1>Quote:<%= quote && quote.quote %> </h1>
           <h3>Movie:<%= quote && quote.movie %></h3>
           <h4>Year:<%= quote && quote.year %></h4>
+          <br>
+          <br>
+
+          <a href="/quotes/<%= Math.floor(Math.random() * 600);%> "><span class="material-icons">
+               autorenew
+               </span></a>
      </section>
      <% } else { %>
      
