@@ -30,7 +30,7 @@ let overviewController = {
       avatar:ddbb.emoticons[4], 
       ddbb,
       h3 : 'About me',
-      title : 'A quickly look about me...', 
+      title : 'A quick look about me...', 
       view: 'aboutMe',
     });
         
