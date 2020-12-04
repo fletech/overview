@@ -18,8 +18,8 @@ var storage = multer.diskStorage({
 
 
 
-router.get('/', abmController.alta) //funciona OK
-router.post('/', upload.any(), abmController.form);
+router.get('/form', abmController.alta) //funciona OK
+router.post('/form', upload.any(), abmController.form);
 
 
 module.exports = router
