@@ -11,15 +11,23 @@ let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../dataBase/users.j
 
 let usersController = {
      usersLogin :  function(req, res, next){
+          if (res.locals.user){
+               req.session.userData = res.locals.user
+               return res.redirect('/')
+          } else {
           res.render('overview', {
                avatar: ddbb.emoticons[3],
                ddbb,
                h3: 'Log in',
                title: 'Log in',
                view:'users' 
-          })
+          })}
      },
      usersRegister :  function(req, res, next){
+          if (res.locals.user){
+               req.session.userData = res.locals.user
+               return res.redirect('/')
+          } else {
           res.render('overview', {
                avatar: ddbb.emoticons[3],
                codeValidation,
@@ -28,9 +36,10 @@ let usersController = {
                h3: 'Sign up',
                title: 'Sign up',
                view:'users' 
-          })
+          })}
      },
      login :  function(req, res, next){
+          
           
           for(let i = 0; i<users.length; i++){
                if(req.body.email == users[i].email){
@@ -79,7 +88,15 @@ let usersController = {
                     avatar : newAdmin.avatar,
                     rol: newAdmin.rol
                }
-               res.redirect('/')
+               res.render('overview', {
+                    avatar: ddbb.emoticons[3],
+                    ddbb,
+                    h3: `Bienvenido/a ${req.session.userData.name}`,
+                    title: 'Welcome',
+                    view:'home',
+                    sesion: req.session.userData,
+               })
+               // res.redirect('/')
 
           } else {
                res.render('overview', {

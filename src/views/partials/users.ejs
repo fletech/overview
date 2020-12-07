@@ -9,21 +9,21 @@
                          <a href="/users/register">Sign up</a>
                     </small>
                </div>
-
+          <div class="containerField">
                <div class="field">
-                    <label for="email">Email
-                         <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email" class="label-name" ><span class="content-name">Email</span>
                     </label>
                </div>
                
                <div class="field">
-                    <label for="password">Password
-                         <input type="password" name="Password" id="password">
+                    <input type="password" name="Password" id="password" required>
+                    <label for="password" class="label-name"><span class="content-name">Password</span>
                     </label>
                     
                </div>
-
-               <div>
+          </div>
+               <div class="button">
                     <button type="submit">Log in</button>
                </div>
 
@@ -34,38 +34,38 @@
           <!-- SIGNUP -->
      <% } else { %>
           <form action="" method='POST'>
-
+          <div class="containerField">
+               <div>
+                    <small>If you do not have a Validation code yet, get in touch with  
+                         <a href="mailto:facundogarcia.ar@gmail.com">Facundo</a>
+                    </small>
+               </div>
                <div class="field">
-                    <label for="email">Name
-                         <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name" class="label-name"><span class="content-name">Name</span>
                     </label>
                </div>
 
                <div class="field">
-                    <label for="email">Email de register
-                         <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email" class="label-name"><span class="content-name">Register email</span>
                     </label>
                </div>
                
                <div class="field">
-                    <label for="password">Password de register
-                         <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password" class="label-name"><span class="content-name">Register password</span>
                     </label>
                </div>
 
                <div class="field validation">
-                    <label for="codeValidation">Validation code
-                         <input type="password" name="codeValidation" id="codeValidation">
+                    <input type="password" name="codeValidation" id="codeValidation" required>
+                    <label for="codeValidation" class="label-name"><span class="content-name">Validation code</span>
                     </label>     
                </div>
+          </div>
 
-               <div>
-                    <small>if you even do not have one, get in touch with  
-                         <a href="mailto:facundogarcia.ar@gmail.com">Facundo</a>
-                    </small>
-               </div>
-
-               <div>
+               <div class="button">
                     <button type="submit">Sign up</button>
                </div>
           </form>

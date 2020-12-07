@@ -1,23 +1,43 @@
 const path = require('path');
 const fs = require('fs');
 
-let dailyDB = JSON.parse(fs.readFileSync(path.join(__dirname, '../dataBase/daily.json'), 'utf-8'));
+let ddbb= require('./ddbb')
+
+const emoticon = () => {return ddbb.emoticons[Math.floor(Math.random() * ddbb.emoticons.length)]};
+
 
 
 
 let dailiesController = {
+  daily :  function(req, res, next){
+    return res.render('overview', {
+      avatar: emoticon(), 
+      ddbb,
+      h3: 'Dailies', 
+      quote: undefined,
+      title: 'Daily UI Challenge',
+      view:'dailyUi', 
+    })
+  },
     index :  function(req, res, next) {
       
-     res.render('dailies', { baseDatos: dailyDB});
+     res.render('dailies', { baseDatos: ddbb.dailyDB});
 
    },
     id: function(req,res,next){
       
-      for (let i = 0; i < dailyDB.length; i++){
+      for (let i = 0; i < ddbb.dailyDB.length; i++){
 
         if (req.params.id == i+1){
-          let imagen = dailyDB[i].imagen
-          return res.render('dailyView', {imagen: imagen})
+          let imagen = ddbb.dailyDB[i].imagen
+          return res.render('overview', {
+                                avatar: emoticon(), 
+                                h3: `Day ${i+1}`,
+                                imagen: imagen,
+                                view: 'daily',
+                                ddbb,
+                                title: 'Dailies'
+                                })
         }
       }
       res.redirect('/')

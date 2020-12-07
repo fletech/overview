@@ -4,6 +4,7 @@ let router = express.Router()
 const dailiesController = require ('../controllers/dailiesController')
 
 router.get('/index', dailiesController.index)
+router.get('/daily',dailiesController.daily)
 router.get('/:id', dailiesController.id) //funciona OK
 
 module.exports = router

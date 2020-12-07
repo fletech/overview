@@ -1,5 +1,6 @@
 @import url(/stylesheets/header.css);
 @import url(/stylesheets/dailyView.css);
+@import url(/stylesheets/daily.css);
 @import url(/stylesheets/dailyUiIndex.css);
 @import url(/stylesheets/newDailyForm.css);
 @import url(/stylesheets/darkOverview.css);
@@ -29,7 +30,8 @@
 }
 
 a {
-  color: #7ac9e9;
+  /* color: #7ac9e9; */
+  color: dodgerblue;
 }
 
 

@@ -1,0 +1,66 @@
+section.dailyView{
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     background-color: rgba(36, 36, 36, 0.685);
+     border-radius: 40px;
+     margin: 30px 0px;
+}
+body#adminDark section.dailyView{
+     background-color: rgba(253, 253, 253, 0.9);
+}
+
+section.dailyView div.backlink{
+     width:100%;
+     height: auto;
+     display: flex;
+     justify-content: space-between;
+     padding: 15px 40px;
+}
+section.dailyView div.backlink a{
+     color: #e9e9e9;
+
+}
+body#adminDark section.dailyView div.backlink a{
+     color: #474747;
+
+}
+section.dailyView div.backlink a:hover{
+     color: tomato;
+}
+
+section.dailyView div#contenedorCard{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+
+
+}
+section.dailyView div#contenedorCard img{
+     width:100%;
+     height: auto;
+     object-fit: cover;
+}
+
+section.dailyView div.description{
+     width:100%;
+     height: auto;
+     padding: 20px 40px;
+     color: #e9e9e9;
+
+}
+body#adminDark section.dailyView div.description{
+     color: #474747;
+
+}
+
+section.dailyView div.description p{
+     width:100%;
+     height: auto;
+}
+
+
+
+
+
+

@@ -5,10 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const fs = require('fs');
 const session =require ('express-session');
+
+
 const usersMiddleware =require ('./middlewares/userLoggedMiddleware');
 const modeMiddleware =require ('./middlewares/modeMiddleware');
-
-
 
 
 const dailiesRouter = require('./routes/dailies');
@@ -28,18 +28,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(session( {secret: 'lamaquinadehacerpajaros'} ));
-app.use(usersMiddleware.userLogged)
 app.use(modeMiddleware.idBody)
 app.use(modeMiddleware.classMode)
+app.use(usersMiddleware.userLogged)
 
 
 
 /////////// ROUTES ///////////
-app.use('/', overviewRouter);
-app.use('/about', overviewRouter);
-app.use('/:mode', overviewRouter);
-app.use('/dailies', dailiesRouter);
 app.use('/abm', abmRouter);
+app.use('/dailies', dailiesRouter);
+app.use('/', overviewRouter);
+app.use('/mode', overviewRouter);
 app.use('/users', usersRouter)
 
 

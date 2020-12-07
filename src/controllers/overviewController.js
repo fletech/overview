@@ -5,16 +5,7 @@ const emoticon = () => {return ddbb.emoticons[Math.floor(Math.random() * ddbb.em
 
 
 let overviewController = {
-  dailyUi :  function(req, res, next){
-    return res.render('overview', {
-      avatar: emoticon(), 
-      ddbb,
-      h3: 'Dailies', 
-      quote: undefined,
-      title: 'Daily UI Challenge',
-      view:'dailyUi', 
-    })
-  },
+  
   overview :  function(req, res, next) {
       return res.render('overview', { 
         avatar:emoticon(), 
@@ -27,7 +18,7 @@ let overviewController = {
   },
   aboutMe :  function(req, res, next) {
     return res.render('overview', { 
-      avatar:ddbb.emoticons[4], 
+      avatar:ddbb.emoticons[1], 
       ddbb,
       h3 : 'About me',
       title : 'A quick look about me...', 
@@ -35,12 +26,22 @@ let overviewController = {
     });
         
 },
+contactMe :  function(req, res, next) {
+  return res.render('overview', { 
+    avatar:ddbb.emoticons[1], 
+    ddbb,
+    h3 : 'Contact me',
+    title : "Let's stay in touch", 
+    view: 'contactMe',
+  });
+      
+},
   quote :  function(req, res, next){
 
       let quote = ddbb.quotes[req.params.id]
 
      return res.render('overview', {
-        avatar:emoticon(),
+        avatar:ddbb.emoticons[6],
         ddbb,
         h3: 'Quotes', 
         quote, 
@@ -51,7 +52,7 @@ let overviewController = {
   },
   quotes :  function(req, res, next){
       return res.render('overview', {
-        avatar:emoticon(), 
+        avatar:ddbb.emoticons[6], 
         ddbb,
         h3: 'Quotes',
         quote: undefined,

@@ -4,11 +4,11 @@ const overviewController = require('../controllers/overviewController')
 
 /* GET users listing. */
 router.get('/', overviewController.overview)
-router.get('/me', overviewController.aboutMe)
-router.get('/light', overviewController.light)
+router.get('/contact-me', overviewController.contactMe)
+router.get('/about-me', overviewController.aboutMe)
 router.get('/dark', overviewController.dark)
+router.get('/light', overviewController.light)
 router.get('/quotes',overviewController.quotes)
-router.get('/dailyUi',overviewController.dailyUi)
 router.get('/quotes/:id',overviewController.quote)
 
 

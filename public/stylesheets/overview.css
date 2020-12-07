@@ -417,19 +417,18 @@ body#admin main#container article div.heading h3{
 --------------Dinamics  Views--------------
 -------------------Frame------------------*/
 
-body#admin main#container section.including{
+body main#container section.including{
      width:80%;
-     padding: 20px;
      display: flex;
      flex-direction: column;
+     align-items: center;
 
 }
 
 /* 3.2.random
 -----------quotes-----------
 */
-body#admin main section.quotes,
-body#admin main section.users{
+body#admin main section.quotes{
      display: flex;
      flex-direction: column;
      width: 100%;
